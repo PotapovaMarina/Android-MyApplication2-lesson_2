@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Application2</string>
+    <string name="button_text_7">7</string>
+    <string name="button_text_8">8</string>
+    <string name="button_text_9">9</string>
+    <string name="button_text_4">4</string>
+    <string name="button_text_5">5</string>
+    <string name="button_text_6">6</string>
+    <string name="button_text_1">1</string>
+    <string name="button_text_2">2</string>
+    <string name="button_text_3">3</string>
+    <string name="button_text_dot">.</string>
+    <string name="button_text_0">0</string>
+    <string name="button_text_equal">=</string>
+    <string name="button_text_plus">+</string>
+    <string name="button_text_minus">-</string>
+    <string name="button_text_multiply">*</string>
+    <string name="button_text_devide">÷</string>
+    <string name="button_text_del">DEL</string>
+    <string name="button_text_AC">AC</string>
+    <string name="button_text_plus_min">+-</string>
+    <string name="button_text_percent">%</string>
+</resources>
