@@ -16,8 +16,6 @@
         <item name="android:insetRight">@dimen/button_inset_size</item>
         <item name="android:insetLeft">@dimen/button_inset_size</item>
         <item name="android:gravity">center</item>
-
-
     </style>
 
     <style name="button_equal_style" parent="button_style">

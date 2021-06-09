@@ -1,12 +1,13 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:thickness="@dimen/width"
-    android:shape="rectangle">
-    <stroke android:width="@dimen/text_input_stroke"
-        android:color="@color/text_input_color"/>
+    android:shape="rectangle"
+    android:thickness="@dimen/width">
+    <stroke
+        android:width="@dimen/text_input_stroke"
+        android:color="@color/text_input_color" />
     <corners android:radius="@dimen/text_input_corner_radius" />
     <gradient
-        android:startColor="@color/text_input_gradient_startColor"
+        android:angle="270"
         android:endColor="@color/text_input_gradient_endColor"
-        android:type="linear"
-        android:angle="270"/>
+        android:startColor="@color/text_input_gradient_startColor"
+        android:type="linear" />
 </shape>
