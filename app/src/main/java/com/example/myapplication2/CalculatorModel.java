@@ -74,9 +74,9 @@ public class CalculatorModel implements Parcelable {
         if (inputStrBuilder.length() < 9) {
             switch (buttonId) {
                 case R.id.button_0:
-                    if (inputStrBuilder.length() != 0) {
+                  //  if (inputStrBuilder.length() != 0) {
                         inputStrBuilder.append("0");
-                    }
+                    //}
                     break;
                 case R.id.button_1:
                     inputStrBuilder.append("1");
@@ -106,7 +106,8 @@ public class CalculatorModel implements Parcelable {
                     inputStrBuilder.append("9");
                     break;
                 case R.id.button_dot:
-                    if (inputStrBuilder.length() != 0) {
+                    if ((inputStrBuilder.length() != 0) &&(inputStrBuilder.indexOf(".")==-1))
+                {
                         inputStrBuilder.append(".");
                     }
                     break;

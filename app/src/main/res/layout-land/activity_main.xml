@@ -18,22 +18,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Space
-            android:layout_width="@dimen/width"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3" />
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_start_end"
+        android:layout_marginEnd="@dimen/margin_start_end">
 
         <TextView
             android:id="@+id/input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/button_margin"
+            android:background="@drawable/background_text_input"
             android:gravity="end"
             android:padding="@dimen/input_text_padding"
             android:textSize="@dimen/text_size"
-            android:background="@drawable/background_text_input"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -45,22 +42,23 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_7"
                 android:text="@string/button_text_7"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_8"
-                android:text="@string/button_text_8"
-                style="@style/button_style" />
+                style="@style/button_style"
+                android:text="@string/button_text_8" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_9"
-                android:text="@string/button_text_9"
-                style="@style/button_style" />
+                style="@style/button_style"
+
+                android:text="@string/button_text_9" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_plus"
                 android:text="@string/button_text_plus"
-                style="@style/button_style" />
+                style="@style/button_style"/>
         </LinearLayout>
 
         <LinearLayout
@@ -71,22 +69,22 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_4"
                 android:text="@string/button_text_4"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_5"
                 android:text="@string/button_text_5"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_6"
                 android:text="@string/button_text_6"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_minus"
                 android:text="@string/button_text_minus"
-                style="@style/button_style" />
+                style="@style/button_style"/>
         </LinearLayout>
 
         <LinearLayout
@@ -94,26 +92,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_1"
                 android:text="@string/button_text_1"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_2"
                 android:text="@string/button_text_2"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_3"
                 android:text="@string/button_text_3"
-                style="@style/button_style" />
+                android:layout_height="@dimen/layout_height"
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_multiply"
                 android:text="@string/button_text_multiply"
-                style="@style/button_style" />
+                style="@style/button_style"/>
         </LinearLayout>
 
         <LinearLayout
@@ -124,23 +122,22 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_0"
                 android:text="@string/button_text_0"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_dot"
                 android:text="@string/button_text_dot"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_AC"
                 android:text="@string/button_text_AC"
-                style="@style/button_style" />
+                style="@style/button_style"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_divide"
                 android:text="@string/button_text_devide"
-                android:layout_height="wrap_content"
-               style="@style/button_style" />
+                style="@style/button_style"/>
 
         </LinearLayout>
 
@@ -153,7 +150,6 @@
                 android:id="@+id/button_equal"
                 style="@style/button_equal_style"
                 android:text="@string/button_text_equal" />
-
             <ToggleButton
                 android:id="@+id/day_night_button"
                 android:layout_width="@dimen/toggle_button_width"
@@ -166,13 +162,7 @@
                 android:layout_marginEnd="@dimen/toggle_button_margin_end"
                 android:textOff="Day mode"
                 android:textSize="12sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
-
-        <Space
-            android:layout_width="@dimen/width"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-   </FrameLayout>
+          </LinearLayout>
+</FrameLayout>
