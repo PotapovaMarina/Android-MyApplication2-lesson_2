@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="button_color">#BF9663</color>
+    <color name="text_input_gradient_endColor">#A69F9F</color>
+    <color name="text_input_gradient_startColor">#E1DDB8</color>
+    <color name="text_input_color">#493704</color>
+</resources>

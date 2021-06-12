@@ -2,22 +2,28 @@ package com.example.myapplication2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<dayOrNightButton> extends AppCompatActivity {
     private static final String CALC_KEY = "Calculator";
-    private EditText inputText;
+    private TextView inputText;
     private CalculatorModel calculator;
+    private ToggleButton dayOrNightButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         if (savedInstanceState != null && savedInstanceState.containsKey(CALC_KEY)) {
             calculator = (CalculatorModel) savedInstanceState.getParcelable(CALC_KEY);
@@ -48,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
                 R.id.button_equal
         };
         inputText = findViewById(R.id.input_text);
-        inputText.setText(calculator.getText());
+
+            inputText.setText(calculator.getText());
 
         View.OnClickListener numberButtonClickListener = new View.OnClickListener() {
             @Override
@@ -66,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-
         for (int i = 0; i < numberIdsButtons.length; i++) {
             findViewById(numberIdsButtons[i]).setOnClickListener(numberButtonClickListener);
         }
@@ -82,6 +88,21 @@ public class MainActivity extends AppCompatActivity {
                 inputText.setText(calculator.getText());
             }
         });
+
+        dayOrNightButton = findViewById(R.id.day_night_button);
+
+
+        dayOrNightButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (buttonView.isChecked()) {
+                    AppCompatDelegate.setDefaultNightMode(
+                            AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(
+                            AppCompatDelegate.MODE_NIGHT_NO);
+                }
+            }
+        });
     }
 
     @Override
@@ -89,5 +110,4 @@ public class MainActivity extends AppCompatActivity {
         outState.putParcelable(CALC_KEY, calculator);
         super.onSaveInstanceState(outState);
     }
-
 }
