@@ -55,7 +55,7 @@ public class MainActivity<dayOrNightButton> extends AppCompatActivity {
         };
         inputText = findViewById(R.id.input_text);
 
-            inputText.setText(calculator.getText());
+        inputText.setText(calculator.getText());
 
         View.OnClickListener numberButtonClickListener = new View.OnClickListener() {
             @Override
@@ -90,21 +90,13 @@ public class MainActivity<dayOrNightButton> extends AppCompatActivity {
         });
 
         dayOrNightButton = findViewById(R.id.day_night_button);
-
-
         dayOrNightButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (buttonView.isChecked()) {
-                    AppCompatDelegate.setDefaultNightMode(
-                            AppCompatDelegate.MODE_NIGHT_YES);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(
-                            AppCompatDelegate.MODE_NIGHT_NO);
-                }
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                AppCompatDelegate.setDefaultNightMode(isChecked?AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
             }
         });
     }
-
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         outState.putParcelable(CALC_KEY, calculator);

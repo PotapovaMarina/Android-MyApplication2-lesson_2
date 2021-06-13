@@ -139,7 +139,6 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_divide"
                 style="@style/button_style"
-                android:layout_height="wrap_content"
                 android:text="@string/button_text_devide" />
 
         </LinearLayout>
@@ -162,10 +161,10 @@
                 android:layout_marginEnd="@dimen/toggle_button_margin_end"
                 android:background="@drawable/background_toggle_button"
                 android:text="ToggleButton"
-                android:textColor="#55ECBC"
+                android:textColor="@color/toggle_button_text_color"
                 android:textOff="Day mode"
                 android:textOn="Night mode"
-                android:textSize="12sp"
+                android:textSize="@dimen/toggle_button_text_size"
                 android:textStyle="bold" />
         </LinearLayout>
 
