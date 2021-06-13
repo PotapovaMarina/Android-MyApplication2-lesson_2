@@ -3,11 +3,11 @@
     android:thickness="@dimen/width">
     <stroke
         android:width="@dimen/text_input_stroke"
-        android:color="@color/text_input_color" />
+        android:color="@color/button_color" />
     <corners android:radius="@dimen/text_input_corner_radius" />
     <gradient
         android:angle="270"
-        android:endColor="@color/text_input_gradient_endColor"
+        android:endColor="#F8F7A1"
         android:startColor="@color/text_input_gradient_startColor"
         android:type="linear" />
 </shape>

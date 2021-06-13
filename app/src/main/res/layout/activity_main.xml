@@ -45,6 +45,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_7"
                 style="@style/button_style"
+                android:background="@drawable/background_buttons"
                 android:text="@string/button_text_7" />
 
             <com.google.android.material.button.MaterialButton
@@ -59,7 +60,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_plus"
-                style="@style/button_style"
+                style="@style/button_operations_style"
                 android:text="@string/button_text_plus" />
         </LinearLayout>
 
@@ -85,7 +86,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_minus"
-                style="@style/button_style"
+                style="@style/button_operations_style"
                 android:text="@string/button_text_minus" />
         </LinearLayout>
 
@@ -112,7 +113,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_multiply"
-                style="@style/button_style"
+                style="@style/button_operations_style"
                 android:text="@string/button_text_multiply" />
         </LinearLayout>
 
@@ -138,7 +139,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_divide"
-                style="@style/button_style"
+                style="@style/button_operations_style"
                 android:text="@string/button_text_devide" />
 
         </LinearLayout>
