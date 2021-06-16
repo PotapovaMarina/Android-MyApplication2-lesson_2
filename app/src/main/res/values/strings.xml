@@ -18,4 +18,8 @@
     <string name="button_text_devide" translatable="false">÷</string>
     <string name="button_text_del" translatable="false">DEL</string>
     <string name="button_text_AC" translatable="false">AC</string>
+    <string name="settings_headline">Настройки</string>
+    <string name="choosing_day_or_night_theme">Выберите дневную/ночную тему экрана:</string>
+    <string name="toggle_day_mode">Day mode</string>
+    <string name="toggle_night_mode">Night mode</string>
 </resources>

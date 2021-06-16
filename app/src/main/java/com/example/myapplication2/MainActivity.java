@@ -4,27 +4,30 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class MainActivity<dayOrNightButton> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private static final String CALC_KEY = "Calculator";
     private TextView inputText;
     private CalculatorModel calculator;
-    private ToggleButton dayOrNightButton;
+    private ImageButton settingButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        settingButton = findViewById(R.id.setting_button);
         if (savedInstanceState != null && savedInstanceState.containsKey(CALC_KEY)) {
             calculator = (CalculatorModel) savedInstanceState.getParcelable(CALC_KEY);
 
@@ -88,14 +91,11 @@ public class MainActivity<dayOrNightButton> extends AppCompatActivity {
                 inputText.setText(calculator.getText());
             }
         });
-
-        dayOrNightButton = findViewById(R.id.day_night_button);
-        dayOrNightButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                AppCompatDelegate.setDefaultNightMode(isChecked?AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
-            }
+        settingButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, DayNightActivity.class);
+            startActivity(intent);
         });
+
     }
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
