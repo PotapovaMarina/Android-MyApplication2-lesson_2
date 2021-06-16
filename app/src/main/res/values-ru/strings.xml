@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Калькулятор</string>
+    <string name="settings_headline">Настройки</string>
+    <string name="choosing_day_or_night_theme">Выберите дневную/ночную тему экрана:</string>
+    <string name="text_back_button">Назад</string>
 </resources>
