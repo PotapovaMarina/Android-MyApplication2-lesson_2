@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/calc">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_start_end"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/settings_headline"
+            android:textColor="@color/black"
+            android:textSize="@dimen/setting_day_night_text_size"
+            android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_in_the_settings_activity"
+            android:background="@drawable/rectangle_for_settings"
+            android:orientation="vertical"
+            android:padding="@dimen/rectangle_settings_padding">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choosing_day_or_night_theme"
+                android:textColor="@color/black"
+                android:textSize="@dimen/choise_of_day_night_text_size"></TextView>
+
+            <ToggleButton
+                android:id="@+id/day_night_button"
+                android:layout_width="@dimen/toggle_button_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/toggle_button_margin_end"
+                android:background="@drawable/background_toggle_button"
+                android:textColor="@color/toggle_button_text_color"
+                android:textOff="@string/toggle_day_mode"
+                android:textOn="@string/toggle_night_mode"
+                android:textSize="@dimen/toggle_button_text_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_button_settings"
+        style="@style/button_style"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:text="@string/text_back_button" />
+
+</FrameLayout>

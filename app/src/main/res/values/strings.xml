@@ -18,4 +18,9 @@
     <string name="button_text_devide" translatable="false">÷</string>
     <string name="button_text_del" translatable="false">DEL</string>
     <string name="button_text_AC" translatable="false">AC</string>
+    <string name="settings_headline">Settings</string>
+    <string name="choosing_day_or_night_theme">Choose day or night theme:</string>
+    <string name="toggle_day_mode" translatable="false">Day mode</string>
+    <string name="toggle_night_mode" translatable="false">Night mode</string>
+    <string name="text_back_button">Back</string>
 </resources>

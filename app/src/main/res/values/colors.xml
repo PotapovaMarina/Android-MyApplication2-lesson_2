@@ -7,10 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="button_color">#8FCAC1</color>
-    <color name="white_color">#FFFFFF</color>
+    <color name="button_color">#97DC3B</color>
     <color name="text_input_color">#4C8C8E</color>
     <color name="text_input_gradient_endColor">#C8C8C8</color>
     <color name="text_input_gradient_startColor">#FFFFFF</color>
+    <color name="toggle_button_text_color">#55ECBC</color>
+    <color name="button_operations_color">#FFEB3B</color>
+
 
 </resources>
