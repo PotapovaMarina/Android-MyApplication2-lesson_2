@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,9 +23,30 @@ public class MainActivity extends AppCompatActivity {
     private TextView inputText;
     private CalculatorModel calculator;
     private ImageButton settingButton;
+    public static final String RESULT_EXTRA_KEY = "result";
+    public static final int REQUEST_CODE = 1111;
+    public static final String PREF_KEY = "pref_key";
+    public static final String PREF_NAME = "MainActivity.pref";
+    public static int uiMode;
+    public static int dayNightUiMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String themeMode = getSharedPreferences(PREF_NAME, MODE_PRIVATE).getString(PREF_KEY, null);
+        uiMode = getResources().getConfiguration().uiMode;
+        dayNightUiMode = uiMode & Configuration.UI_MODE_NIGHT_MASK;
+
+        if (dayNightUiMode == Configuration.UI_MODE_NIGHT_NO) {
+            dayNightUiMode = 1;
+        }
+        if (dayNightUiMode == Configuration.UI_MODE_NIGHT_YES) {
+            dayNightUiMode = 2;
+        }
+        if (themeMode != null && !themeMode.isEmpty()) {
+            if (Integer.parseInt(themeMode) != dayNightUiMode) {
+                AppCompatDelegate.setDefaultNightMode(Integer.parseInt(themeMode));
+            }
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         settingButton = findViewById(R.id.setting_button);
@@ -95,8 +117,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, DayNightActivity.class);
             startActivity(intent);
         });
-
     }
+
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         outState.putParcelable(CALC_KEY, calculator);
